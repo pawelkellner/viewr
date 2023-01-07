@@ -1,8 +1,12 @@
 import "./SearchBar.css";
 
-const SearchBar = () =>{
+const SearchBar = ({search}) =>{
+    const preventThanSearch = (e) =>{
+        e.preventDefault()
+        search(e.target[0].value)
+    }
     return(
-        <form action="" className="searchbar">
+        <form onSubmit={preventThanSearch} action="" className="searchbar">
             <input className="searchbar__input" type="text" placeholder="Minimal photography"/>
             <button className="searchbar__button">SEARCH</button>
         </form>
