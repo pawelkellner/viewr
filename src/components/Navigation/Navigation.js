@@ -1,12 +1,18 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
+import {motion as m} from "framer-motion";
+
 const Navigation = () =>{
 
     let underline = "underline"
 
     return(
-        <nav className="nav">
+        <m.nav className="nav"
+        initial={{y: -80, x: `-50%`, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        transition={{ type: "tween", duration: 1.5}}
+        >
             <div className="navItems__wrapper">
                 <a href="/ben"><p>ABOUT</p></a>
                 <NavLink 
@@ -27,7 +33,7 @@ const Navigation = () =>{
                 <a href="/ben"><p>USERS</p></a>
                 <a href="/ben"><p>ACCOUNT</p></a>
             </div>
-        </nav>
+        </m.nav>
     )
 }
 

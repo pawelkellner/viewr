@@ -1,4 +1,5 @@
 .photos{
+    position: relative;
     margin-inline: 5.2rem;
     display: flex;
     flex-direction: column;
@@ -15,4 +16,31 @@
     display: flex;
     justify-content: center;
     gap: 1.6rem;
+}
+
+.pagination{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 0;
+    height: 4.3rem;
+    width: 15rem;
+}
+
+.pagination p{
+    font-size: 1.6rem;
+    text-align: center;
+    display: block;
+    width: 50%;
+}
+
+.page__buttonsWrapper{
+    width: 50%;
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
