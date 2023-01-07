@@ -12,27 +12,27 @@ const SectionPhotos = (props) =>{
             console.log(photo)
             return(
                 <PhotoFlexColumn>
-                    <Photo photo={props.data[0]}/>
-                    <Photo photo={props.data[1]}/>
-                    <Photo photo={props.data[2]}/>
+                    <Photo photo={props.data[0]} photoClicked={props.photoClicked}/>
+                    <Photo photo={props.data[1]} photoClicked={props.photoClicked}/>
+                    <Photo photo={props.data[2]} photoClicked={props.photoClicked}/>
                 </PhotoFlexColumn>
             )
         } if ( index === 5 && !secondColumnMade){
             console.log(photo)
             return(
                 <PhotoFlexColumn>
-                    <Photo photo={props.data[3]}/>
-                    <Photo photo={props.data[4]}/>
-                    <Photo photo={props.data[5]}/>
+                    <Photo photo={props.data[3]} photoClicked={props.photoClicked}/>
+                    <Photo photo={props.data[4]} photoClicked={props.photoClicked}/>
+                    <Photo photo={props.data[5]} photoClicked={props.photoClicked}/>
                 </PhotoFlexColumn>
             )
         } if ( index === 8 && !thirdColumnMade){
             console.log(photo)
             return(
                 <PhotoFlexColumn>
-                    <Photo photo={props.data[6]} />
-                    <Photo photo={props.data[7]} />
-                    <Photo photo={props.data[8]} />
+                    <Photo photo={props.data[6]} photoClicked={props.photoClicked} />
+                    <Photo photo={props.data[7]} photoClicked={props.photoClicked} />
+                    <Photo photo={props.data[8]} photoClicked={props.photoClicked} />
                 </PhotoFlexColumn>
             )
         }

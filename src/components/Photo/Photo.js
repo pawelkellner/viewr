@@ -1,9 +1,13 @@
 import "./Photo.css";
 
 const Photo = (props) =>{
-    console.log(props.photo.user)
+    
+    const photoClicked = () =>{
+        props.photoClicked(props.photo.id)
+    }
+
     return(
-        <article className="photo">
+        <article onClick={photoClicked} className="photo">
             <img className="photo__img" src={props.photo.urls.regular} alt="" />
             <div className="photo__fade">
                 <section className="photo__info">
