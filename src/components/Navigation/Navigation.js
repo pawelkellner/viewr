@@ -1,11 +1,18 @@
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 const Navigation = () =>{
+
+    let underline = "underline"
+
     return(
         <nav className="nav">
             <div className="navItems__wrapper">
                 <a href="/ben"><p>ABOUT</p></a>
-                <a href="/ben"><p>DISCOVER</p></a>
+                <NavLink 
+                to="/discover"
+                className={({ isActive }) =>    isActive ? underline : undefined }
+                ><p>DISCOVER</p></NavLink>
             </div>
             <figure className="logo">
                 <svg width="64" height="14" viewBox="0 0 64 14" fill="none" xmlns="http://www.w3.org/2000/svg">
