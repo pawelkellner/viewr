@@ -12,7 +12,12 @@ function App() {
 
   if(loading){
     return (
-      <h1>loading....</h1>
+      <div className="content__wrapper">
+      <Navigation />
+      <Header />
+      <SectionPhotographers />
+      <SectionPhotos />
+    </div>
     )
   };
 
@@ -20,12 +25,28 @@ function App() {
 
   console.log(data)
 
+  console.log(data?.results)
+
+  let loadedData = data;
+
+  if(loadedData?.results !== undefined){
+      loadedData = data.results
+  }
+
+  const search = (input) =>{
+    if(input === ""){
+      refetch(`https://api.unsplash.com/photos/random?count=9&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`)
+    }else {
+      refetch(`https://api.unsplash.com/search/photos?page=1&per_page=9&query=${input}&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`)
+    }
+  }
+
   return (
     <div className="content__wrapper">
       <Navigation />
-      <Header />
-      <SectionPhotographers data={data} />
-      <SectionPhotos data={data}/>
+      <Header search={search} />
+      <SectionPhotographers data={loadedData} />
+      <SectionPhotos data={loadedData}/>
     </div>
   );
 }
