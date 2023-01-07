@@ -2,7 +2,6 @@
     position: relative;
     width: 42.4rem;
     height: calc(max-content - 2.4px);
-    background: red;
     flex-shrink: 0;
 }
 

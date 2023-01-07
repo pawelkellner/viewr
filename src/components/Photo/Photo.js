@@ -1,5 +1,8 @@
 import "./Photo.css";
 
+import {motion as m} from "framer-motion";
+
+
 const Photo = (props) =>{
     
     const photoClicked = () =>{
@@ -7,7 +10,10 @@ const Photo = (props) =>{
     }
 
     return(
-        <article onClick={photoClicked} className="photo">
+        <m.article onClick={photoClicked} className="photo"
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        >
             <img className="photo__img" src={props.photo.urls.regular} alt="" />
             <div className="photo__fade">
                 <section className="photo__info">
@@ -19,7 +25,7 @@ const Photo = (props) =>{
                     </p>
                 </section>
             </div>
-        </article>
+        </m.article>
     )
 }
 

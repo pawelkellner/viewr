@@ -27,8 +27,8 @@ const DetailCard = (props) =>{
                     <figure className="detailCard__ownerImg">
                         <img src={props.loadedPhotoCard?.user.profile_image.small} alt="" />
                     </figure>
-                    <p className="photo__ownerName">
-                    {props.loadedPhotoCard?.user.name}
+                    <p className="detailCard__ownerName">
+                    {props.loadedPhotoCard?.user.name} | {props.loadedPhotoCard?.width}x{props.loadedPhotoCard?.height} | {props.loadedPhotoCard?.created_at.substring(0,10)}
                     </p>
                 </section>
                 <span className="detailCard__titleFade"></span>

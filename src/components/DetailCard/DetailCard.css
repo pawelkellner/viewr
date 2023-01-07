@@ -60,8 +60,10 @@
     border-radius: 50%;
 }
 
-.photo__ownerName{
+.detailCard__ownerName{
     color: #919191;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .detailCard__titleFade{
