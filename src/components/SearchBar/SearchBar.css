@@ -1,0 +1,33 @@
+.searchbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem;
+    position: absolute;
+    bottom: 2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40% - 48px);
+    height: 8.8rem;
+    background: white;
+}
+
+.searchbar__input{
+    all: unset;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    border: 1px solid #E0E0E0;
+    font-weight: 400;
+    width: 70%;
+}
+
+.searchbar__button{
+    all: unset;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    width: 25%;
+}
