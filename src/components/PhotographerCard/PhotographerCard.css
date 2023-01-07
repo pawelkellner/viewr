@@ -3,6 +3,7 @@
     height: 37.2rem;
     width: 20.3rem;
     border: solid 1px #CCCCCC;
+    flex-shrink: 0;
 }
 
 .photographer__img{
@@ -23,12 +24,12 @@
     gap: 0.8rem;
     padding-block: 1.4rem;
     padding-inline: 2.4rem;
-    height: 8.4rem;
+    min-height: 8.4rem;
     width: 100%;
 }
 
 .photographer__name{
-    height: 2.4rem;
+    min-height: 2.4rem;
     font-weight: 500;
     font-size: 1.6rem;
 }

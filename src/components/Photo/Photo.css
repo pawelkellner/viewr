@@ -1,0 +1,61 @@
+.photo{
+    position: relative;
+    width: 42.4rem;
+    height: calc(max-content - 2.4px);
+    background: red;
+    flex-shrink: 0;
+}
+
+.photo:hover .photo__fade{
+    opacity: 1;
+    transition: ease-in-out 0.2s;
+}
+
+.photo__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.photo__fade{
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0.2s;
+
+}
+
+.photo__info{
+    height: max-content;
+    width: max-content;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+}
+
+.photo__ownerImg{
+    height: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.photo__ownerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.photo__ownerName{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
