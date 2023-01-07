@@ -24,3 +24,11 @@
     align-items: center;
     gap: 6.2rem;
 }
+
+.underline{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    border-bottom: solid 1px white;
+}
