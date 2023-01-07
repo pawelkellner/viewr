@@ -1,8 +1,11 @@
+import Navigation from '../Navigation/Navigation';
 import './App.css';
 
 function App() {
   return (
-    <h2>ben</h2>
+    <div className="content__wrapper">
+      <Navigation />
+    </div>
   );
 }
 
