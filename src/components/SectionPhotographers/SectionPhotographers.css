@@ -1,0 +1,20 @@
+.photographers{
+    margin-inline: 5.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.photographers__title{
+    font-weight: 500;
+    height: 4.3rem;
+    border-bottom: solid 1px #E0E0E0;
+}
+
+.photographers__contentWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: calc(100% - 4.3rem);
+}
