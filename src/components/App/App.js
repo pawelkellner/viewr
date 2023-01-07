@@ -6,8 +6,11 @@ import './App.css';
 
 import useFetch from '../useFetch/useFetch';
 import { useState} from "react";
+import DetailCard from '../DetailCard/DetailCard';
 
 function App() {
+  const [photoId, setPhotoId] = useState("")
+  const [photoClicked, setPhotoClicked] = useState(false)
   const {data, loading, error, refetch} = useFetch(`https://api.unsplash.com/photos/random?count=9&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`);
 
   if(loading){
@@ -23,17 +26,18 @@ function App() {
 
   if (error) console.log(error);
 
-  console.log(data)
-
-  console.log(data?.results)
-
   let loadedData = data;
 
   if(loadedData?.results !== undefined){
       loadedData = data.results
   }
 
+  const loadedPhotoCard = loadedData?.find((photo) =>{
+    return photo.id === photoId
+  })
+
   const search = (input) =>{
+    setPhotoClicked(false)
     if(input === ""){
       refetch(`https://api.unsplash.com/photos/random?count=9&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`)
     }else {
@@ -41,12 +45,18 @@ function App() {
     }
   }
 
+  const photoGotClicked = (photoId) =>{
+    setPhotoId(photoId);
+    setPhotoClicked(true);
+  }
+
   return (
     <div className="content__wrapper">
       <Navigation />
       <Header search={search} />
       <SectionPhotographers data={loadedData} />
-      <SectionPhotos data={loadedData}/>
+      <SectionPhotos data={loadedData} photoClicked={photoGotClicked}/>
+      <DetailCard photoClicked={photoClicked} loadedPhotoCard={loadedPhotoCard}/>
     </div>
   );
 }
