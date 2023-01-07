@@ -1,14 +1,14 @@
 import "./PhotographerCard.css";
 
-const PhotographerCard = () =>{
+const PhotographerCard = ({photographer}) =>{
     return(
         <article className="photographer">
             <figure className="photographer__img">
-                <img src="https://picsum.photos/300/300" alt="" />
+                <img src={photographer.profile_image.large} alt="" />
             </figure>
             <section className="photographer__info">
-                <h1 className="photographer__name">Ivy Madison</h1>
-                <p className="photographer__photoCount">1.412 Photos</p>
+                <h1 className="photographer__name">{photographer.name}</h1>
+                <p className="photographer__photoCount">{photographer.total_photos} Photos</p>
             </section>
         </article>
     )
