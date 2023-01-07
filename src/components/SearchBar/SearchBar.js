@@ -4,6 +4,7 @@ const SearchBar = ({search}) =>{
     const preventThanSearch = (e) =>{
         e.preventDefault()
         search(e.target[0].value)
+        e.target[0].value = ""
     }
     return(
         <form onSubmit={preventThanSearch} action="" className="searchbar">
