@@ -31,3 +31,7 @@
     color: white;
     width: 25%;
 }
+
+.searchbar__button:hover{
+    background: #3C3C3C;
+}
