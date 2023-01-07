@@ -1,7 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
 
-const Header = () =>{
+const Header = (props) =>{
     return(
         <header className="header">
             <div className="header__textWrapper">
@@ -10,7 +10,7 @@ const Header = () =>{
             </div>
             <span className="bottom__left"></span>
             <span className="bottom__right"></span>
-            <SearchBar />
+            <SearchBar search={props.search}/>
         </header>
     )
 }
