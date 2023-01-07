@@ -9,6 +9,7 @@
     color: white;
     height: 8.8rem;
     width: 70rem;
+    z-index: 3;
 }
 
 .nav a{
